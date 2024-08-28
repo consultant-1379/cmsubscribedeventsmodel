@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ericsson.nms</groupId>
+        <artifactId>integration</artifactId>
+        <version>15.2.0.40</version>
+    </parent>
+    <groupId>com.ericsson.oss.services.cmsubscribedevents</groupId>
+    <artifactId>cmsubscribedeventsmodel</artifactId>
+    <version>1.3.3-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <url>http://www.ericsson.com</url>
+    <organization>
+        <name>Ericsson</name>
+    </organization>
+
+    <scm>
+        <connection>scm:git:ssh://gerrit-gamma.gic.ericsson.se:29418/OSS/ENM-Parent/SQ-Gate/com.ericsson.oss.services.cmsubscribedevents/cmsubscribedeventsmodel</connection>
+        <developerConnection>scm:git:ssh://gerrit-gamma.gic.ericsson.se:29418/OSS/ENM-Parent/SQ-Gate/com.ericsson.oss.services.cmsubscribedevents/cmsubscribedeventsmodel</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <name>[${project.artifactId}] Model Project</name>
+
+    <modules>
+        <module>cmsubscribedeventsmodel-jar</module>
+        <module>cmsubscribedeventsmodel-models</module>
+        <module>ERICcmsubscribedeventsmodel_CXP9042863</module>
+    </modules>
+    <properties>
+        <!-- Always use the latest stable Modeling BOM -->
+        <version.modeling-bom>21.8.10</version.modeling-bom>
+        <!-- Versions for plugins must be explicitly defined. The versions of Annotation
+            Processor, Model Processing and Model Deployment Tool should always be the
+            same as the managed versions from the Modeling BOM -->
+        <version.annotation-processor.plugin>3.43.2</version.annotation-processor.plugin>
+        <version.model-processing.plugin>1.54.2</version.model-processing.plugin>
+        <version.mdt.plugin>9.27.2</version.mdt.plugin>
+        <version.sdk-config-api.plugin>4.1.17</version.sdk-config-api.plugin>
+        <version.maven-deploy-plugin.plugin>3.0.0</version.maven-deploy-plugin.plugin>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ericsson.oss.itpf.modeling</groupId>
+                <artifactId>Modeling-BOM</artifactId>
+                <version>${version.modeling-bom}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
